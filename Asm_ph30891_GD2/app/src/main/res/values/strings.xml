@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Asm_ph30891_gd2</string>
+    <string-array name="spinner_price">
+        <item>Ascending</item>
+        <item>Decrease</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

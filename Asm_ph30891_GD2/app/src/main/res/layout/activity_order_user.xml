@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".view.OrderUserActivity">
+
+    <LinearLayout
+        android:id="@+id/layout0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:backgroundTint="#E68900"
+            android:padding="5dp"
+            android:layout_gravity="center"
+            app:cardCornerRadius="5dp">
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_back"
+                app:tint="#FFFFFF" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Order"
+            android:textStyle="bold"
+            android:layout_marginLeft="50dp"
+            android:textSize="28sp"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/layout0"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/khung"
+            android:padding="5dp"
+            android:layout_marginVertical="5dp">
+            <ImageView
+                android:id="@+id/imgProduct"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/image"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true" />
+            <TextView
+                android:id="@+id/tvNameProduct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Name product"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/imgProduct"
+                android:layout_toEndOf="@id/imgProduct"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginHorizontal="10dp"
+               />
+            <TextView
+                android:id="@+id/tvPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="1000$"
+               android:layout_below="@id/tvNameProduct"
+                android:layout_toRightOf="@id/imgProduct"
+                android:textSize="16sp"
+                android:layout_marginBottom="10dp"
+                android:textStyle="bold"
+                android:layout_marginHorizontal="10dp"
+                />
+        </RelativeLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilQuantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvPrice"
+            android:layout_marginTop="7dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edQuantity"
+                android:inputType="number"
+                android:hint="Quantity (kg) :"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/layout1"
+        android:id="@+id/layout2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Payment method :"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/tvPaymentMethod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                android:textSize="16sp"
+                android:gravity="end"
+                android:text="COD (thanh toán khi nhận hàng)"/>
+        </LinearLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilTenNguoiNhan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edTenNguoiNhan"
+                android:hint="Your name :"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edPhoneNumber"
+                android:hint="Your phone number :"
+                android:inputType="number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/layout3"
+        app:layout_constraintTop_toBottomOf="@id/layout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Province :"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+        <Spinner
+            android:id="@+id/spnProvince"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="District :"
+            android:layout_marginTop="10dp"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+        <Spinner
+            android:id="@+id/spnDistrict"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ward :"
+            android:layout_marginTop="10dp"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+        <Spinner
+            android:id="@+id/spnWard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edLocation"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Location :"
+                android:inputType="textMultiLine" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="horizontal">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="47dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="10dp"
+            android:paddingHorizontal="5dp"
+            android:background="@drawable/khung"
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:text="Total :"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_centerVertical="true"/>
+            <TextView
+                android:id="@+id/tvTotalPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1000 $"
+                android:layout_marginStart="7dp"
+                android:layout_toEndOf="@id/total"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:backgroundTint="#E68900"
+            android:text="ORDER"
+            android:layout_weight="1"
+            app:cornerRadius="7dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
